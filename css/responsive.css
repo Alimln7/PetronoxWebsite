@@ -86,18 +86,18 @@
   }
   .banner__overlay {
     background:
-      linear-gradient(180deg, rgba(0,0,0,0.1) 0%, transparent 25%, transparent 50%, rgba(0,0,0,0.5) 70%, rgba(0,0,0,0.85) 100%),
-      linear-gradient(90deg, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.3) 40%, transparent 65%);
+      linear-gradient(90deg, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0.35) 40%, transparent 65%);
   }
   .banner__content {
     position: absolute;
-    bottom: 0;
+    top: 50%;
     left: 0;
+    transform: translateY(-50%);
     max-width: 60%;
     align-items: flex-start;
     text-align: left;
     gap: 6px;
-    padding: var(--space-sm) var(--space-md) var(--space-md) var(--space-md);
+    padding: var(--space-md) var(--space-md) var(--space-md) var(--space-md);
   }
   .banner__content::before {
     display: none;
