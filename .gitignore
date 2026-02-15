@@ -1,0 +1,34 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Database (135MB — deploy separately, not via git)
+petronox.db
+
+# Logs
+*.log
+
+# Dev-only scripts
+optimize_images.py
+replace_bg.py
+import_data.py
+
+# Environment
+.env
+
+# Claude
+.claude/
+
+# Windows
+nul
+Thumbs.db
+Desktop.ini
+
+# Editors
+.vscode/
+.idea/
+*.swp
+
+# OS
+.DS_Store

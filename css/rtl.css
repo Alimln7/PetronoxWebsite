@@ -1,0 +1,336 @@
+/* ===========================================
+   RTL (Right-to-Left) Support — Arabic
+   Applied when body has .rtl class or html[dir="rtl"]
+   =========================================== */
+
+/* ---- Font Override for Arabic ---- */
+body.rtl {
+  font-family: 'Noto Sans Arabic', 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+/* ---- Global Direction ---- */
+html[dir="rtl"] {
+  direction: rtl;
+}
+
+/* ---- Header ---- */
+body.rtl .header__logo-img {
+  margin-right: 0;
+  margin-left: 12px;
+}
+
+body.rtl .header__logo {
+  flex-direction: row-reverse;
+}
+
+body.rtl .header__brand {
+  text-align: right;
+}
+
+body.rtl .nav-buttons {
+  flex-direction: row-reverse;
+}
+
+body.rtl .header__inner {
+  flex-direction: row-reverse;
+}
+
+/* ---- Language Dropdown ---- */
+body.rtl .lang-dropdown {
+  right: auto;
+  left: 0;
+}
+
+body.rtl .lang-dropdown button {
+  text-align: right;
+  justify-content: flex-end;
+}
+
+/* ---- Banner ---- */
+body.rtl .banner {
+  justify-content: flex-end;
+}
+
+body.rtl .banner__content {
+  align-items: flex-end;
+  text-align: right;
+  padding: var(--space-2xl) var(--space-xl) var(--space-2xl) 0;
+}
+
+/* Flip the vertical red accent line to right side */
+body.rtl .banner__content::before {
+  left: auto;
+  right: 0;
+}
+
+/* Flip the overlay gradient for RTL */
+body.rtl .banner__overlay {
+  background:
+    linear-gradient(270deg, rgba(8,8,12,0.85) 0%, rgba(8,8,12,0.6) 30%, rgba(8,8,12,0.15) 50%, transparent 65%),
+    linear-gradient(180deg, rgba(8,8,12,0.4) 0%, transparent 15%, transparent 85%, rgba(8,8,12,0.6) 100%);
+}
+
+body.rtl .banner__cta {
+  flex-direction: row-reverse;
+}
+
+/* ---- Mobile Menu ---- */
+body.rtl .dropdown-menu {
+  text-align: right;
+}
+
+body.rtl .btn--drop,
+body.rtl .btn--nav {
+  flex-direction: row-reverse;
+}
+
+body.rtl .mobile-lang-select {
+  text-align: right;
+}
+
+/* ---- Content & Sections ---- */
+body.rtl .section__content {
+  text-align: right;
+}
+
+/* ---- Home Section ---- */
+body.rtl .home-feature {
+  flex-direction: row-reverse;
+  text-align: right;
+}
+
+body.rtl .home-feature__arrow {
+  transform: scaleX(-1);
+}
+
+body.rtl .home-feature:hover .home-feature__arrow {
+  transform: scaleX(-1) translateX(3px);
+}
+
+/* ---- About Section ---- */
+body.rtl .about-mission {
+  border-left: none;
+  border-right: 4px solid var(--color-primary);
+  flex-direction: row-reverse;
+  text-align: right;
+}
+
+body.rtl .about-value {
+  text-align: right;
+}
+
+/* ---- Oil Finder ---- */
+body.rtl .dropdowns-container select {
+  background-position: left 14px center;
+  padding: 12px 16px 12px 36px;
+  text-align: right;
+}
+
+body.rtl .search-input {
+  padding: 14px 44px 14px 18px;
+  background-position: right 14px center;
+  text-align: right;
+}
+
+body.rtl .search-input-container {
+  flex-direction: row-reverse;
+}
+
+body.rtl .vehicle-info::before {
+  left: auto;
+  right: 0;
+  border-radius: 0 2px 2px 0;
+}
+
+body.rtl .vehicle-info {
+  flex-direction: row-reverse;
+  text-align: right;
+}
+
+body.rtl .vehicle-text {
+  text-align: right;
+}
+
+body.rtl .equipment-card {
+  border-left: none;
+  border-right: 3px solid var(--color-primary);
+  text-align: right;
+}
+
+body.rtl .accordion__header {
+  flex-direction: row-reverse;
+}
+
+body.rtl .accordion__chevron {
+  transform: scaleX(-1);
+}
+
+body.rtl .accordion.open .accordion__chevron {
+  transform: scaleX(-1) rotate(180deg);
+}
+
+body.rtl .accordion__body {
+  text-align: right;
+}
+
+body.rtl .type-suggestion {
+  text-align: right;
+}
+
+/* ---- Contact Section ---- */
+body.rtl .contact-section {
+  text-align: right;
+}
+
+/* ---- Footer ---- */
+body.rtl .footer__top {
+  direction: rtl;
+  text-align: right;
+}
+
+body.rtl .footer__col-title::after {
+  left: auto;
+  right: 0;
+}
+
+body.rtl .footer__logo {
+  flex-direction: row-reverse;
+}
+
+body.rtl .footer__link:hover {
+  padding-left: 0;
+  padding-right: 4px;
+}
+
+body.rtl .footer__contact-item {
+  text-align: right;
+}
+
+body.rtl .footer__social-icons {
+  justify-content: flex-start;
+}
+
+body.rtl .footer__bottom {
+  text-align: center;
+}
+
+/* ---- Images: NO flipping/mirroring in RTL ---- */
+/* Images stay in their original orientation */
+
+/* Flip SVG icons in buttons for RTL */
+body.rtl .btn-icon {
+  transform: scaleX(-1);
+}
+
+/* Don't flip globe icon */
+body.rtl .btn--lang .btn-icon {
+  transform: none;
+}
+
+/* ---- Product Cards ---- */
+body.rtl .product-detail-view {
+  flex-direction: row-reverse;
+}
+
+/* ---- Certification Badges ---- */
+body.rtl .cert-badge {
+  text-align: right;
+}
+
+body.rtl .cert-badge__icon {
+  margin: 0 auto var(--space-md);
+}
+
+/* ---- Back to Top Button ---- */
+body.rtl .back-to-top {
+  right: auto;
+  left: 20px;
+}
+
+/* ---- Toast Notifications ---- */
+body.rtl .toast-container {
+  left: auto;
+  right: 10px;
+}
+
+body.rtl .toast {
+  text-align: right;
+  flex-direction: row-reverse;
+}
+
+/* ---- Responsive RTL overrides ---- */
+@media (max-width: 900px) {
+  body.rtl .header__inner {
+    flex-direction: row-reverse;
+  }
+}
+
+@media (max-width: 768px) {
+  body.rtl .banner {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  body.rtl .banner__content {
+    padding: var(--space-xl) 0;
+    align-items: center;
+    text-align: center;
+  }
+
+  body.rtl .banner__content::before {
+    display: none;
+  }
+
+  body.rtl .about-mission {
+    flex-direction: column;
+    border-right: none;
+    border-top: 4px solid var(--color-primary);
+    text-align: center;
+  }
+
+  body.rtl .footer__top {
+    text-align: center;
+  }
+
+  body.rtl .footer__col-title::after {
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%);
+  }
+
+  body.rtl .footer__social-icons {
+    justify-content: center;
+  }
+
+  body.rtl .footer__logo {
+    justify-content: center;
+  }
+
+  body.rtl .vehicle-info {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  body.rtl .back-to-top {
+    left: 20px;
+    right: auto;
+  }
+}
+
+/* ---- Skip link for RTL ---- */
+body.rtl .skip-link {
+  right: -100%;
+  left: auto;
+}
+body.rtl .skip-link:focus {
+  right: 50%;
+  left: auto;
+  transform: translateX(50%);
+}
+
+/* ---- Scrollbar for RTL ---- */
+html[dir="rtl"] ::-webkit-scrollbar {
+  width: 8px;
+}

@@ -1,0 +1,93 @@
+:root {
+  /* Brand Colors — Neon Red */
+  --color-primary: #c8102e;
+  --color-primary-dark: #a00d24;
+  --color-primary-light: #ff4444;
+  --color-primary-subtle: rgba(200, 16, 46, 0.10);
+  --color-primary-bg: #111118;
+
+  /* Secondary — Deep Dark Blues */
+  --color-secondary: #1a1a2e;
+  --color-secondary-dark: #0a0a0f;
+  --color-secondary-mid: #12121e;
+  --color-secondary-light: #16162a;
+
+  /* Green Accent */
+  --color-accent: #2e7d32;
+
+  /* Backgrounds — Dark */
+  --color-bg: #0a0a0f;
+  --color-surface: #111118;
+  --color-surface-dark: #0d0d15;
+  --color-surface-elevated: #161622;
+
+  /* Text — Light on Dark */
+  --color-text: #e0e0e8;
+  --color-text-light: #ffffff;
+  --color-text-muted: #8888a0;
+  --color-text-dark: #f0f0f5;
+
+  /* Borders — Subtle on Dark */
+  --color-border: #1e1e30;
+  --color-border-light: rgba(255,255,255,0.06);
+
+  /* Gradients */
+  --color-turquoise-bg: linear-gradient(135deg, #c8102e 0%, #a00d24 50%, #c8102e 100%);
+  --color-header-bg: linear-gradient(to right, #0a0a0f, #0e0e1a, #111120);
+  --color-red-gradient: linear-gradient(135deg, #c8102e, #e63946);
+
+  /* Glow Effects */
+  --color-glow-red: rgba(200, 16, 46, 0.6);
+  --color-glow-red-strong: rgba(200, 16, 46, 0.9);
+  --color-circuit-line: rgba(200, 16, 46, 0.15);
+
+  /* Typography */
+  --font-primary: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
+  --fs-hero: clamp(1.75rem, 5vw, 2.75rem);
+  --fs-h1: clamp(1.5rem, 4vw, 2.25rem);
+  --fs-h2: clamp(1.25rem, 3vw, 1.75rem);
+  --fs-h3: clamp(1rem, 2.5vw, 1.25rem);
+  --fs-body: clamp(0.875rem, 1.5vw, 1rem);
+  --fs-small: clamp(0.75rem, 1.2vw, 0.875rem);
+  --line-height-tight: 1.2;
+  --line-height-snug: 1.35;
+  --line-height-normal: 1.6;
+  --line-height-relaxed: 1.8;
+
+  /* Spacing */
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 3rem;
+  --space-3xl: 4rem;
+  --space-section: clamp(2rem, 6vw, 3.5rem);
+
+  /* Borders & Shadows — Stronger for Dark Theme */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 20px;
+  --radius-full: 999px;
+  --shadow-xs: 0 1px 2px rgba(0,0,0,0.3);
+  --shadow-sm: 0 2px 8px rgba(0,0,0,0.4), 0 1px 2px rgba(0,0,0,0.3);
+  --shadow-md: 0 4px 16px rgba(0,0,0,0.5), 0 2px 4px rgba(0,0,0,0.3);
+  --shadow-lg: 0 8px 32px rgba(0,0,0,0.6), 0 4px 8px rgba(0,0,0,0.3);
+  --shadow-xl: 0 16px 48px rgba(0,0,0,0.7);
+  --shadow-hover: 0 12px 36px rgba(200,16,46,0.25), 0 4px 12px rgba(0,0,0,0.4);
+  --shadow-red: 0 4px 20px rgba(200,16,46,0.4);
+
+  /* Transitions */
+  --transition-fast: 0.15s ease;
+  --transition-normal: 0.25s ease;
+  --transition-slow: 0.4s ease;
+  --transition-slider: 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --ease-smooth: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
+  /* Layout */
+  --max-width: 1200px;
+  --header-height: 70px;
+  --content-max-width: 1100px;
+}

@@ -1,0 +1,389 @@
+/* ===========================================
+   RESPONSIVE - Mobile-first breakpoints
+   =========================================== */
+
+/* ---- Tablet and below (≤900px) ---- */
+@media (max-width: 900px) {
+  .nav-buttons {
+    display: none;
+  }
+  .lang-toggle {
+    display: none;
+  }
+  .menu-button {
+    display: block;
+  }
+  .dropdown-menu {
+    display: none; /* toggled by JS */
+  }
+
+  .header__logo-img {
+    width: 60px;
+    height: 60px;
+  }
+  .header__title {
+    font-size: 20px;
+  }
+  .header__subtitle {
+    font-size: 11px;
+  }
+
+  .banner {
+    min-height: clamp(280px, 45vw, 380px);
+    padding-left: 30px;
+  }
+  .banner__title {
+    font-size: clamp(1.2rem, 3.5vw, 1.8rem);
+  }
+  .banner__cta {
+    padding: 12px 32px;
+    font-size: 14px;
+  }
+
+  .product-detail-view {
+    flex-direction: column;
+  }
+  .product-detail-image {
+    flex: none;
+    text-align: center;
+  }
+  .product-detail-image img {
+    max-width: 200px;
+    margin: 0 auto;
+  }
+
+  /* Slider: items-per-view handled by JS custom property */
+  .slider__track {
+    padding: 16px 12px;
+    gap: 16px;
+  }
+
+  .footer__top {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-xl);
+  }
+}
+
+/* ---- Mobile (≤768px) ---- */
+@media (max-width: 768px) {
+  .header {
+    padding: 10px 20px;
+  }
+
+  .banner {
+    min-height: clamp(260px, 40vw, 320px);
+    padding-left: 20px;
+    background-attachment: scroll;
+    background-image: url('../icons/hero-dark-banner-mobile.jpg');
+  }
+
+  .content {
+    padding: var(--space-md);
+  }
+
+  .section__content {
+    padding: var(--space-lg);
+  }
+
+  .home-features {
+    grid-template-columns: 1fr;
+  }
+
+  .about-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .about-values {
+    grid-template-columns: 1fr;
+  }
+
+  .about-mission {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: var(--space-lg);
+  }
+
+  .about-page {
+    gap: var(--space-xl);
+  }
+
+  .products-grid {
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: var(--space-md);
+  }
+
+  .contact-methods {
+    grid-template-columns: 1fr;
+  }
+
+  .social-links {
+    gap: var(--space-md);
+  }
+
+  .footer__top {
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+    text-align: center;
+  }
+  .footer__col-title::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .footer__social-icons {
+    justify-content: center;
+  }
+  .footer__logo {
+    justify-content: center;
+  }
+
+  .oil-finder-header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .vehicle-option {
+    text-align: center;
+  }
+  .search-input-container {
+    flex-direction: column;
+  }
+  .categories-container {
+    gap: var(--space-sm);
+  }
+  .category-card {
+    min-width: 100px;
+    padding: var(--space-md) var(--space-sm);
+  }
+  .oils-grid {
+    grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+  }
+
+  .slider__image {
+    height: 180px;
+  }
+  .slider__track {
+    gap: 14px;
+    padding: 14px 10px;
+  }
+
+  .vehicle-info {
+    padding: var(--space-md);
+  }
+
+  .accordion__body {
+    font-size: var(--fs-small);
+  }
+}
+
+/* ---- Small Mobile (≤480px) ---- */
+@media (max-width: 480px) {
+  .header {
+    padding: 8px 15px;
+  }
+  .header__logo-img {
+    width: 45px;
+    height: 45px;
+  }
+  .header__title {
+    font-size: 18px;
+  }
+  .header__subtitle {
+    display: none;
+  }
+  .header--scrolled .header__logo-img {
+    width: 35px;
+    height: 35px;
+  }
+
+  .banner {
+    min-height: 240px;
+    padding-left: 15px;
+  }
+  .banner__title {
+    font-size: 1.2rem;
+  }
+  .banner__subtitle {
+    font-size: 0.75rem;
+  }
+  .banner__cta {
+    padding: 10px 24px;
+    font-size: 13px;
+  }
+
+  .content {
+    padding: var(--space-sm);
+  }
+
+  .section__content {
+    padding: var(--space-md);
+    border-radius: var(--radius-md);
+  }
+
+  .products-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-sm);
+  }
+
+  .about-stats {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-sm);
+  }
+  .about-stat {
+    padding: var(--space-md) var(--space-sm);
+  }
+  .about-stat__number {
+    font-size: 1.5rem;
+  }
+  .about-value {
+    padding: var(--space-lg);
+  }
+  .about-page {
+    gap: var(--space-lg);
+  }
+
+  .slider {
+    border-radius: var(--radius-md);
+  }
+  .slider__track {
+    gap: 12px;
+    padding: 12px 8px;
+  }
+  .slider__image {
+    height: 160px;
+  }
+  .slider__nav {
+    width: 36px;
+    height: 36px;
+  }
+  .slider__nav svg {
+    width: 16px;
+    height: 16px;
+  }
+  .slider__nav--prev { left: 6px; }
+  .slider__nav--next { right: 6px; }
+  .slider__dot {
+    width: 6px;
+    height: 6px;
+  }
+  .slider__dot.active {
+    width: 18px;
+  }
+  .slider__counter {
+    font-size: 10px;
+  }
+
+  .loading-logo-wrap {
+    width: 110px;
+    height: 110px;
+  }
+  .loading-bar-container {
+    width: 220px;
+  }
+  .loading-brand-text {
+    font-size: 22px;
+    letter-spacing: 6px;
+  }
+
+  .home-welcome h2 {
+    font-size: 1.3rem;
+  }
+
+  .product-detail-name {
+    font-size: 1.3rem;
+  }
+
+  .toast {
+    max-width: 280px;
+    font-size: 13px;
+  }
+  .toast-container {
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+  }
+
+  .back-to-top {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    bottom: 20px;
+    right: 20px;
+  }
+}
+
+/* ---- Extra Small (≤360px) ---- */
+@media (max-width: 360px) {
+  .header__logo-img {
+    width: 38px;
+    height: 38px;
+    margin-right: 8px;
+  }
+  .header__title {
+    font-size: 16px;
+  }
+
+  .banner {
+    min-height: 220px;
+  }
+
+  .products-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .section__content {
+    padding: var(--space-sm);
+  }
+
+  .dropdowns-container select,
+  .search-input {
+    font-size: 14px;
+    padding: 8px 10px;
+  }
+  .vehicle-option {
+    padding: 10px 20px;
+    font-size: var(--fs-small);
+  }
+  .vehicle-info {
+    flex-direction: column;
+    text-align: center;
+  }
+  .oils-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ---- Large Desktop (≥1440px) ---- */
+@media (min-width: 1440px) {
+  .content {
+    max-width: 1400px;
+  }
+  /* slider items-per-view handled by JS */
+}
+
+/* ---- Certification & ASTM responsive ---- */
+@media (max-width: 768px) {
+  .cert-badges { grid-template-columns: 1fr 1fr; }
+  .astm-strip__items { gap: var(--space-sm); }
+  .astm-item { padding: var(--space-xs) var(--space-md); }
+  .footer__cert-badges { justify-content: center; }
+}
+@media (max-width: 480px) {
+  .cert-badges { grid-template-columns: 1fr; }
+  .astm-strip { padding: var(--space-md); }
+}
+
+/* ---- Reduced motion preference ---- */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .reveal-on-scroll {
+    opacity: 1;
+    transform: none;
+  }
+}

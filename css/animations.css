@@ -1,0 +1,280 @@
+/* ===========================================
+   ANIMATIONS - Consolidated @keyframes
+   =========================================== */
+
+/* ---- Fade In Up (section reveals) ---- */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ---- Fade Out Down (toast dismiss) ---- */
+@keyframes fadeOutDown {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+}
+
+/* ---- Glow Red (logo hover animation) ---- */
+@keyframes glowRed {
+  0% {
+    filter: drop-shadow(0 0 0px rgba(200,16,46,0));
+  }
+  100% {
+    filter: drop-shadow(0 0 12px rgba(200,16,46,0.7));
+  }
+}
+
+/* ---- Logo Entrance (loading screen — fade in + scale) ---- */
+@keyframes logoEntrance {
+  0% {
+    opacity: 0;
+    transform: scale(0.7);
+    filter: drop-shadow(0 0 0 transparent);
+  }
+  60% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+    filter: drop-shadow(0 0 20px rgba(200,16,46,0.5));
+  }
+}
+
+/* ---- Logo Breathing (loading screen — continuous subtle pulse) ---- */
+@keyframes logoBreathing {
+  0%, 100% {
+    transform: scale(1);
+    filter: drop-shadow(0 0 15px rgba(200,16,46,0.4));
+  }
+  50% {
+    transform: scale(1.04);
+    filter: drop-shadow(0 0 30px rgba(200,16,46,0.7));
+  }
+}
+
+/* ---- Loading Glow Pulse (ambient red glow behind logo) ---- */
+@keyframes loadingGlowPulse {
+  0%, 100% {
+    opacity: 0.6;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.15);
+  }
+}
+
+/* ---- Shimmer (loading bar) ---- */
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+/* ---- Spin (loading spinner) ---- */
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ---- Float (decorative elements) ---- */
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+  100% { transform: translateY(0); }
+}
+
+/* ---- Scale In (showcase cards) ---- */
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* ---- Subtle Pulse (badge glow) ---- */
+@keyframes subtlePulse {
+  0%, 100% {
+    box-shadow: 0 4px 15px rgba(200,16,46,0.2);
+  }
+  50% {
+    box-shadow: 0 4px 25px rgba(200,16,46,0.4);
+  }
+}
+
+/* ---- Badge Pulse (about hero badge) ---- */
+@keyframes badgePulse {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(200,16,46,0.15);
+  }
+  50% {
+    box-shadow: 0 0 0 8px rgba(200,16,46,0);
+  }
+}
+
+/* ======= SVG/PNG LOGO LOADING ANIMATION ======= */
+
+@keyframes logoSlideFromLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-60px) scale(0.8);
+    filter: drop-shadow(0 0 0 transparent);
+  }
+  60% {
+    opacity: 1;
+    transform: translateX(4px) scale(1.01);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+    filter: drop-shadow(0 0 12px rgba(200,16,46,0.5));
+  }
+}
+
+@keyframes logoSlideFromRight {
+  0% {
+    opacity: 0;
+    transform: translateX(60px) scale(0.8);
+    filter: drop-shadow(0 0 0 transparent);
+  }
+  60% {
+    opacity: 1;
+    transform: translateX(-4px) scale(1.01);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+    filter: drop-shadow(0 0 12px rgba(200,16,46,0.5));
+  }
+}
+
+@keyframes logoFadeCenter {
+  0% {
+    opacity: 0;
+    transform: scale(0.6);
+  }
+  60% {
+    opacity: 1;
+    transform: scale(1.06);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes logoBrandReveal {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes logoAssembledPulse {
+  0%, 100% {
+    filter: drop-shadow(0 0 12px rgba(200,16,46,0.3));
+  }
+  50% {
+    filter: drop-shadow(0 0 28px rgba(200,16,46,0.65));
+  }
+}
+
+/* ---- Lottie Logo Glow (loading screen, syncs with Lottie pulse phase) ---- */
+@keyframes lottieGlow {
+  0%, 100% {
+    filter: drop-shadow(0 0 15px rgba(200,16,46,0.35));
+  }
+  50% {
+    filter: drop-shadow(0 0 30px rgba(200,16,46,0.7))
+           drop-shadow(0 0 60px rgba(200,16,46,0.2));
+  }
+}
+
+/* ---- Stagger animations for grid items ---- */
+@keyframes staggerFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ---- Neon Pulse (CTA button glow) ---- */
+@keyframes neonPulse {
+  0%, 100% {
+    box-shadow:
+      0 0 10px rgba(200,16,46,0.4),
+      0 0 20px rgba(200,16,46,0.2),
+      0 0 40px rgba(200,16,46,0.1);
+  }
+  50% {
+    box-shadow:
+      0 0 15px rgba(200,16,46,0.6),
+      0 0 30px rgba(200,16,46,0.35),
+      0 0 60px rgba(200,16,46,0.15);
+  }
+}
+
+/* ---- Text Glow (banner title pulse) ---- */
+@keyframes textGlow {
+  0%, 100% {
+    text-shadow:
+      0 0 10px rgba(255,255,255,0.3),
+      0 0 20px rgba(255,255,255,0.1);
+  }
+  50% {
+    text-shadow:
+      0 0 15px rgba(255,255,255,0.5),
+      0 0 30px rgba(255,255,255,0.2),
+      0 0 50px rgba(200,16,46,0.15);
+  }
+}
+
+/* ---- Circuit Sweep (background pattern animation) ---- */
+@keyframes circuitSweep {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+
+/* ===== Scroll Reveal ===== */
+@keyframes revealUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+}
+.reveal-on-scroll.revealed {
+  animation: revealUp 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
