@@ -75,51 +75,58 @@
   }
 
   .banner {
-    min-height: clamp(280px, 55vw, 400px);
-    padding: 0 0 0 var(--space-md);
+    min-height: clamp(260px, 50vw, 360px);
+    padding: 0;
     background-attachment: scroll;
     background-image: url('../icons/hero-dark-banner-mobile.jpg');
-    background-position: right center;
+    background-position: center center;
     background-size: cover;
-    align-items: center;
+    align-items: flex-end;
     justify-content: flex-start;
   }
   .banner__overlay {
-    /* Tight dark on left for text, engine clear on right */
     background:
-      linear-gradient(90deg,
-        rgba(0,0,0,0.92) 0%,
-        rgba(0,0,0,0.8) 30%,
-        rgba(0,0,0,0.3) 50%,
-        transparent 65%
+      linear-gradient(180deg,
+        rgba(0,0,0,0.15) 0%,
+        transparent 30%,
+        transparent 55%,
+        rgba(0,0,0,0.6) 75%,
+        rgba(0,0,0,0.92) 100%
       );
   }
   .banner__content {
-    max-width: 45%;
-    align-items: flex-start;
-    text-align: left;
-    gap: 8px;
-    padding: var(--space-md) 0 var(--space-md) var(--space-xs);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    max-width: 100%;
+    align-items: center;
+    text-align: center;
+    gap: 6px;
+    padding: var(--space-sm) var(--space-md) var(--space-md);
   }
   .banner__content::before {
     display: none;
   }
   .banner__title {
-    font-size: clamp(1.1rem, 5vw, 1.5rem);
-    letter-spacing: 2px;
+    font-size: clamp(1rem, 4.5vw, 1.3rem);
+    letter-spacing: 1.5px;
     text-shadow: 0 2px 10px rgba(0,0,0,0.9);
+    white-space: nowrap;
   }
   .banner__subtitle {
-    font-size: 0.6rem;
-    letter-spacing: 1.5px;
-    line-height: 1.5;
+    font-size: 0.55rem;
+    letter-spacing: 1px;
+    line-height: 1.4;
     text-shadow: 0 1px 6px rgba(0,0,0,0.9);
+    white-space: nowrap;
   }
   .banner__cta {
-    margin-top: 4px;
-    padding: 8px 20px;
-    font-size: 0.7rem;
-    letter-spacing: 2px;
+    margin-top: 2px;
+    padding: 7px 18px;
+    font-size: 0.65rem;
+    letter-spacing: 1.5px;
+    white-space: nowrap;
   }
 
   .content {
@@ -241,25 +248,20 @@
   }
 
   .banner {
-    min-height: clamp(280px, 70vw, 420px);
-  }
-  .banner__content {
-    padding: var(--space-sm) var(--space-md) var(--space-md);
-    gap: 6px;
+    min-height: clamp(220px, 48vw, 320px);
   }
   .banner__title {
-    font-size: clamp(0.95rem, 4.5vw, 1.3rem);
-    letter-spacing: 1.5px;
-  }
-  .banner__subtitle {
-    font-size: 0.6rem;
+    font-size: clamp(0.85rem, 4vw, 1.1rem);
     letter-spacing: 1px;
   }
+  .banner__subtitle {
+    font-size: 0.5rem;
+  }
   .banner__cta {
-    padding: 8px 20px;
-    font-size: 11px;
-    letter-spacing: 1.5px;
-    gap: 6px;
+    padding: 6px 16px;
+    font-size: 0.6rem;
+    letter-spacing: 1px;
+    gap: 5px;
     margin-top: 2px;
   }
 
@@ -376,7 +378,7 @@
   }
 
   .banner {
-    min-height: clamp(260px, 65vw, 380px);
+    min-height: clamp(200px, 45vw, 280px);
   }
 
   .products-grid {
