@@ -34,6 +34,7 @@ const sectionLanguageUpdaters = {
 
 async function boot() {
   try {
+
     // Phase 1: Initialize core systems
     updateLoadingText('Initializing...', 5);
     initI18n();
@@ -80,12 +81,12 @@ async function boot() {
     // Subscribe to language changes
     subscribe('languageChanged', handleLanguageChange);
 
-    // Smooth hide loading
+    // Ensure page starts at top, then hide loading
+    window.scrollTo(0, 0);
     setTimeout(() => {
       hideGlobalLoading();
+      state.isFirstLoad = false;
     }, 300);
-
-    state.isFirstLoad = false;
   } catch (err) {
     console.error('Boot failed:', err);
     updateLoadingText('Loading failed. Please refresh.', 0);
