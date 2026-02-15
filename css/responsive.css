@@ -35,6 +35,9 @@
   .banner__title {
     font-size: clamp(1.2rem, 3.5vw, 1.8rem);
   }
+  .banner__subtitle {
+    font-size: clamp(0.65rem, 1.3vw, 0.85rem);
+  }
   .banner__cta {
     padding: 10px 28px;
     font-size: 13px;
@@ -72,10 +75,63 @@
   }
 
   .banner {
-    min-height: clamp(260px, 40vw, 320px);
-    padding-left: 20px;
-    background-attachment: scroll;
-    background-image: url('../icons/hero-dark-banner-mobile.jpg');
+    /* Stacked: image area top, text area bottom — no overlap */
+    display: flex;
+    flex-direction: column;
+    min-height: auto;
+    padding: 0;
+    background: none;
+    background-color: rgb(10,10,15);
+    overflow: hidden;
+  }
+  .banner__overlay {
+    /* Repurpose overlay as the image area */
+    position: relative;
+    inset: auto;
+    width: 100%;
+    height: clamp(180px, 50vw, 300px);
+    flex-shrink: 0;
+    background: url('../icons/hero-dark-banner-mobile.jpg') no-repeat center center;
+    background-size: cover;
+    order: 0;
+  }
+  .banner__content {
+    position: relative;
+    z-index: 2;
+    max-width: 100%;
+    width: 100%;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+    padding: var(--space-md) var(--space-lg);
+    background: rgb(10,10,15);
+    order: 2;
+  }
+  .banner__content::before {
+    display: none;
+  }
+  .banner__title {
+    font-size: clamp(1rem, 4.5vw, 1.4rem);
+    letter-spacing: 2px;
+    text-shadow: none;
+    animation: none;
+  }
+  .banner__subtitle {
+    font-size: 0.65rem;
+    letter-spacing: 1.5px;
+    line-height: 1.5;
+    animation: none;
+  }
+  .banner__cta {
+    margin-top: 4px;
+    animation: none;
+  }
+  .banner::after {
+    /* Neon line sits between image and text */
+    position: relative;
+    order: 1;
+    bottom: auto;
+    flex-shrink: 0;
   }
 
   .content {
@@ -196,21 +252,27 @@
     height: 35px;
   }
 
-  .banner {
-    min-height: 240px;
-    padding-left: 15px;
+  .banner__overlay {
+    height: clamp(160px, 45vw, 240px);
+  }
+  .banner__content {
+    padding: var(--space-sm) var(--space-md);
+    gap: 6px;
   }
   .banner__title {
-    font-size: 1.2rem;
+    font-size: clamp(0.9rem, 4vw, 1.2rem);
+    letter-spacing: 1.5px;
   }
   .banner__subtitle {
-    font-size: 0.75rem;
+    font-size: 0.6rem;
+    letter-spacing: 1px;
   }
   .banner__cta {
     padding: 8px 20px;
     font-size: 11px;
     letter-spacing: 1.5px;
     gap: 6px;
+    margin-top: 2px;
   }
 
   .content {
@@ -325,8 +387,8 @@
     font-size: 16px;
   }
 
-  .banner {
-    min-height: 220px;
+  .banner__overlay {
+    height: clamp(150px, 42vw, 200px);
   }
 
   .products-grid {
