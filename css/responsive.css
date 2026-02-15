@@ -75,25 +75,26 @@
   }
 
   .banner {
-    /* Stacked: image area top, text area bottom — no overlap */
-    display: flex;
-    flex-direction: column;
-    min-height: auto;
+    /* Full image with dark overlay on bottom half for text */
+    min-height: clamp(320px, 75vw, 480px);
     padding: 0;
-    background: none;
-    background-color: rgb(10,10,15);
-    overflow: hidden;
+    background-attachment: scroll;
+    background-image: url('../icons/hero-dark-banner-mobile.jpg');
+    background-position: center top;
+    background-size: cover;
+    align-items: stretch;
+    justify-content: flex-end;
   }
   .banner__overlay {
-    /* Repurpose overlay as the image area */
-    position: relative;
-    inset: auto;
-    width: 100%;
-    height: clamp(180px, 50vw, 300px);
-    flex-shrink: 0;
-    background: url('../icons/hero-dark-banner-mobile.jpg') no-repeat center center;
-    background-size: cover;
-    order: 0;
+    /* Dark gradient on bottom half only — engine stays clear on top */
+    background:
+      linear-gradient(180deg,
+        transparent 0%,
+        transparent 35%,
+        rgba(0,0,0,0.55) 55%,
+        rgba(0,0,0,0.8) 75%,
+        rgba(0,0,0,0.92) 100%
+      );
   }
   .banner__content {
     position: relative;
@@ -103,35 +104,24 @@
     align-items: center;
     text-align: center;
     gap: 10px;
-    padding: var(--space-md) var(--space-lg);
-    background: rgb(10,10,15);
-    order: 2;
+    padding: var(--space-md) var(--space-lg) var(--space-lg);
   }
   .banner__content::before {
     display: none;
   }
   .banner__title {
-    font-size: clamp(1rem, 4.5vw, 1.4rem);
+    font-size: clamp(1.1rem, 5vw, 1.5rem);
     letter-spacing: 2px;
-    text-shadow: none;
-    animation: none;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.9);
   }
   .banner__subtitle {
     font-size: 0.65rem;
     letter-spacing: 1.5px;
     line-height: 1.5;
-    animation: none;
+    text-shadow: 0 1px 6px rgba(0,0,0,0.9);
   }
   .banner__cta {
     margin-top: 4px;
-    animation: none;
-  }
-  .banner::after {
-    /* Neon line sits between image and text */
-    position: relative;
-    order: 1;
-    bottom: auto;
-    flex-shrink: 0;
   }
 
   .content {
@@ -252,15 +242,15 @@
     height: 35px;
   }
 
-  .banner__overlay {
-    height: clamp(160px, 45vw, 240px);
+  .banner {
+    min-height: clamp(280px, 70vw, 420px);
   }
   .banner__content {
-    padding: var(--space-sm) var(--space-md);
+    padding: var(--space-sm) var(--space-md) var(--space-md);
     gap: 6px;
   }
   .banner__title {
-    font-size: clamp(0.9rem, 4vw, 1.2rem);
+    font-size: clamp(0.95rem, 4.5vw, 1.3rem);
     letter-spacing: 1.5px;
   }
   .banner__subtitle {
@@ -387,8 +377,8 @@
     font-size: 16px;
   }
 
-  .banner__overlay {
-    height: clamp(150px, 42vw, 200px);
+  .banner {
+    min-height: clamp(260px, 65vw, 380px);
   }
 
   .products-grid {
