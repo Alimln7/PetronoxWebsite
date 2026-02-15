@@ -36,8 +36,9 @@
     font-size: clamp(1.2rem, 3.5vw, 1.8rem);
   }
   .banner__cta {
-    padding: 12px 32px;
-    font-size: 14px;
+    padding: 10px 28px;
+    font-size: 13px;
+    letter-spacing: 2px;
   }
 
   .product-detail-view {
@@ -206,8 +207,10 @@
     font-size: 0.75rem;
   }
   .banner__cta {
-    padding: 10px 24px;
-    font-size: 13px;
+    padding: 8px 20px;
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    gap: 6px;
   }
 
   .content {
