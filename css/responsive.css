@@ -85,21 +85,21 @@
     justify-content: flex-start;
   }
   .banner__overlay {
-    /* Dark on left for text, clear on right for engine */
+    /* Tight dark on left for text, engine clear on right */
     background:
       linear-gradient(90deg,
-        rgba(0,0,0,0.88) 0%,
-        rgba(0,0,0,0.7) 40%,
-        rgba(0,0,0,0.2) 70%,
-        transparent 100%
+        rgba(0,0,0,0.92) 0%,
+        rgba(0,0,0,0.8) 30%,
+        rgba(0,0,0,0.3) 50%,
+        transparent 65%
       );
   }
   .banner__content {
-    max-width: 55%;
+    max-width: 45%;
     align-items: flex-start;
     text-align: left;
     gap: 8px;
-    padding: var(--space-md) 0 var(--space-md) var(--space-sm);
+    padding: var(--space-md) 0 var(--space-md) var(--space-xs);
   }
   .banner__content::before {
     display: none;
