@@ -39,7 +39,7 @@ export function renderContact(container) {
               <img src="icons/instagram_1.png" alt="Instagram">
               <span>Instagram</span>
             </a>
-            <a href="https://www.youtube.com/@Speranza" target="_blank" rel="noopener noreferrer" class="social-link">
+            <a href="https://youtube.com/@speranza-lb?si=noYtjoFYSkOY44WW" target="_blank" rel="noopener noreferrer" class="social-link">
               <img src="icons/youtube_1.png" alt="YouTube">
               <span>YouTube</span>
             </a>
